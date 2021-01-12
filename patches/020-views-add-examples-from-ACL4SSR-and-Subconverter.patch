@@ -1,82 +1,89 @@
-From 0092ddca7faa480e07184c157e992badd4eef633 Mon Sep 17 00:00:00 2001
-From: CN_SZTL <cnsztl@project-openwrt.eu.org>
-Date: Mon, 11 Jan 2021 11:57:19 +0000
-Subject: [PATCH] views: add examples from ACL4SSR and Subconverter
-
-Signed-off-by: CN_SZTL <cnsztl@project-openwrt.eu.org>
----
- src/views/Subconverter.vue | 104 +++++++++++++++++++++++++++++++++++++
- 1 file changed, 104 insertions(+)
-
-diff --git a/src/views/Subconverter.vue b/src/views/Subconverter.vue
-index 701006f..d058719 100644
+--- a/.env
++++ b/.env
+@@ -7,7 +7,7 @@ VUE_APP_BACKEND_RELEASE = "https://githu
+ VUE_APP_SUBCONVERTER_REMOTE_CONFIG = "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/example_external_config.ini"
+ 
+ # API 后端
+-VUE_APP_SUBCONVERTER_DEFAULT_BACKEND = "https://api.wcc.best"
++VUE_APP_SUBCONVERTER_DEFAULT_BACKEND = "http://quzardhome.cn:25500"
+ 
+ # 短链接后端
+ VUE_APP_MYURLS_DEFAULT_BACKEND = "https://suo.yt"
 --- a/src/views/Subconverter.vue
 +++ b/src/views/Subconverter.vue
-@@ -257,6 +257,110 @@ export default {
+@@ -36,7 +36,7 @@
+                     style="width: 100%"
+                     v-model="form.customBackend"
+                     :fetch-suggestions="backendSearch"
+-                    placeholder="动动小手，（建议）自行搭建后端服务。例：http://127.0.0.1:25500/sub?"
++                    placeholder="动动小手，（建议）自行搭建后端服务。例：http://quzardhome.cn:25500/sub?"
+                   >
+                     <el-button slot="append" @click="gotoGayhub" icon="el-icon-link">前往项目仓库</el-button>
+                   </el-autocomplete>
+@@ -255,9 +255,109 @@ export default {
+           ClashR: "clashr",
+           Surge2: "surge&ver=2",
          },
-         backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
+-        backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
++        backendOptions: [{ value: "http://quzardhome.cn:25500/sub?" }],
          remoteConfig: [
-+          {
-+            label: "默认",
-+            options: [
-+              {
-+                label: "不选，由接口提供方提供",
-+                value: ""
-+              }
-+            ]
-+          },
-+          {
+           {
 +            label: "ACL4SSR",
 +            options: [
 +              {
-+                label: "ACL4SSR_Online 默认版 分组比较全 (与Github同步)",
++                label: "ACL4SSR_Online 默认版 分组比较全(与Github同步)",
 +                value:
-+                  "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/config/ACL4SSR_Online.ini"
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini"
 +              },
 +              {
 +                label: "ACL4SSR_Online_AdblockPlus 更多去广告 (与Github同步)",
 +                value:
-+                  "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/config/ACL4SSR_Online_AdblockPlus.ini"
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_AdblockPlus.ini"
 +              },
 +              {
 +                label: "ACL4SSR_Online_NoAuto 无自动测速 (与Github同步)",
 +                value:
-+                  "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/config/ACL4SSR_Online_NoAuto.ini"
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoAuto.ini"
++              },
++              {
++                label: "ACL4SSR_Online_NoReject 无广告拦截规则(与Github同步)",
++                value:
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoReject.ini"
 +              },
 +              {
 +                label: "ACL4SSR_Online_Mini 精简版 (与Github同步)",
 +                value:
-+                  "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/config/ACL4SSR_Online_Mini.ini"
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini.ini"
 +              },
 +              {
 +                label: "ACL4SSR_Online_Mini_AdblockPlus.ini 精简版 更多去广告 (与Github同步)",
 +                value:
-+                  "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/config/ACL4SSR_Online_Mini_AdblockPlus.ini"
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_AdblockPlus.ini"
 +              },
 +              {
 +                label: "ACL4SSR_Online_Mini_NoAuto.ini 精简版 不带自动测速 (与Github同步)",
 +                value:
-+                  "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/config/ACL4SSR_Online_Mini_NoAuto.ini"
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_NoAuto.ini"
 +              },
 +              {
 +                label: "ACL4SSR_Online_Mini_Fallback.ini 精简版 带故障转移 (与Github同步)",
 +                value:
-+                  "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/config/ACL4SSR_Online_Mini_Fallback.ini"
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_Fallback.ini"
 +              },
 +              {
 +                label: "ACL4SSR_Online_Mini_MultiMode.ini 精简版 自动测速、故障转移、负载均衡 (与Github同步)",
 +                value:
-+                  "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/config/ACL4SSR_Online_Mini_MultiMode.ini"
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiMode.ini"
 +              },
 +              {
 +                label: "ACL4SSR_Online_Full 全分组 重度用户使用 (与Github同步)",
 +                value:
-+                  "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/config/ACL4SSR_Online_Full.ini"
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
 +              },
 +              {
 +                label: "ACL4SSR_Online_Full_AdblockPlus 全分组 重度用户使用 更多去广告 (与Github同步)",
 +                value:
-+                  "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/config/ACL4SSR_Online_Full_AdblockPlus.ini"
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_AdblockPlus.ini"
 +              },
 +              {
 +                label: "ACL4SSR 本地 默认版 分组比较全",
@@ -87,11 +94,11 @@ index 701006f..d058719 100644
 +                value: "config/ACL4SSR_Mini.ini"
 +              },
 +              {
-+                label: "ACL4SSR_Mini_NoAuto.ini 本地 精简版+无自动测速",
++                label: "ACL4SSR_Mini_NoAuto.ini 本地 精简版无自动测速",
 +                value: "config/ACL4SSR_Mini_NoAuto.ini"
 +              },
 +              {
-+                label: "ACL4SSR_Mini_Fallback.ini 本地 精简版+fallback",
++                label: "ACL4SSR_Mini_Fallback.ini 本地 精简版fallback",
 +                value: "config/ACL4SSR_Mini_Fallback.ini"
 +              },
 +              {
@@ -120,9 +127,7 @@ index 701006f..d058719 100644
 +              }
 +            ]
 +          },
-           {
++          {
              label: "universal",
              options: [
--- 
-2.17.1
-
+               {
