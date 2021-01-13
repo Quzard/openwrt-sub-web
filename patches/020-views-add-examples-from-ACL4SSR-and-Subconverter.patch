@@ -49,9 +49,9 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
 +                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
 +              },
 +              {
-+                label: "ACL4SSR_Online_Full_NoAuto.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
++                label: "ACL4SSR_Online_Full_Netflix.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
 +                value:
-+                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_Netflix.ini"
 +              },
 +              {
 +                label: "ACL4SSR_Online 默认版 分组比较全(与Github同步)",
