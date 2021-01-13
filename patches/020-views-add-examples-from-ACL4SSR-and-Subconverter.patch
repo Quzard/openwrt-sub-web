@@ -24,7 +24,7 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
                    >
                      <el-button slot="append" @click="gotoGayhub" icon="el-icon-link">前往项目仓库</el-button>
                    </el-autocomplete>
-@@ -255,9 +255,128 @@ export default {
+@@ -255,26 +255,166 @@ export default {
            ClashR: "clashr",
            Surge2: "surge&ver=2",
          },
@@ -32,9 +32,11 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
 +        backendOptions: [{ value: "http://quzardhome.cn:25500/sub?" }],
          remoteConfig: [
            {
+-            label: "universal",
 +            label: "默认",
-+            options: [
-+              {
+             options: [
+               {
+-                label: "No-Urltest",
 +                label: "不选，由接口提供方提供",
 +                value: ""
 +              }
@@ -45,12 +47,15 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
 +            options: [
 +              {
 +                label: "ACL4SSR_Online_Full_NoAuto.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
-+                value:
+                 value:
+-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/no-urltest.ini"
 +                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
-+              },
-+              {
+               },
+               {
+-                label: "Urltest",
 +                label: "ACL4SSR_Online_Full_Netflix.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
-+                value:
+                 value:
+-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/urltest.ini"
 +                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_Netflix.ini"
 +              },
 +              {
@@ -151,6 +156,71 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
 +            ]
 +          },
 +          {
-             label: "universal",
++            label: "ConnersHua 神机规则",
++            options: [
++              {
++                label: "ConnersHua 神机规则 Basic,connershua_basic.ini",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/connershua_basic.ini"
++              },
++              {
++                label: "ConnersHua 神机规则 Pro,connershua_pro.ini",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/connershua_new.ini"
++              },
++              {
++                label: "ConnersHua 神机规则 BacktoCN 回国专用,connershua_backtocn.ini",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/connershua_backtocn.ini"
++              }
++            ]
++          },
++          {
++            label: "lhie1 洞主规则",
++            options: [
++              {
++                label: "lhie1 洞主规则（使用 Clash 分组规则）,lhie1_clash.ini",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/lhie1_clash.ini"
++              },
++              {
++                label: "lhie1 洞主规则完整版,lhie1_dler.ini",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/lhie1_dler.ini"
+               }
+             ]
+           },
+           {
+             label: "customized",
              options: [
++              
                {
+                 label: "Maying",
+                 value:
+@@ -336,6 +476,21 @@ export default {
+                   "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/special/basic.ini"
+               }
+             ]
++          },
++          {
++            label: "universal",
++            options: [
++              {
++                label: "No-Urltest",
++                value:
++                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/no-urltest.ini"
++              },
++              {
++                label: "Urltest",
++                value:
++                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/urltest.ini"
++              }
++            ]
+           }
+         ]
+       },
+@@ -663,3 +818,4 @@ export default {
+   },
+ };
+ </script>
++
