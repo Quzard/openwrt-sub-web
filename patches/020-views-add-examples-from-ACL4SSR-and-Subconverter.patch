@@ -1,5 +1,7 @@
---- a/.env
-+++ b/.env
+Index: sub-web-1.0.0/.env
+===================================================================
+--- sub-web-1.0.0.orig/.env
++++ sub-web-1.0.0/.env
 @@ -7,7 +7,7 @@ VUE_APP_BACKEND_RELEASE = "https://githu
  VUE_APP_SUBCONVERTER_REMOTE_CONFIG = "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/example_external_config.ini"
  
@@ -9,8 +11,10 @@
  
  # 短链接后端
  VUE_APP_MYURLS_DEFAULT_BACKEND = "https://suo.yt"
---- a/src/views/Subconverter.vue
-+++ b/src/views/Subconverter.vue
+Index: sub-web-1.0.0/src/views/Subconverter.vue
+===================================================================
+--- sub-web-1.0.0.orig/src/views/Subconverter.vue
++++ sub-web-1.0.0/src/views/Subconverter.vue
 @@ -36,7 +36,7 @@
                      style="width: 100%"
                      v-model="form.customBackend"
@@ -20,7 +24,7 @@
                    >
                      <el-button slot="append" @click="gotoGayhub" icon="el-icon-link">前往项目仓库</el-button>
                    </el-autocomplete>
-@@ -255,9 +255,109 @@ export default {
+@@ -255,9 +255,128 @@ export default {
            ClashR: "clashr",
            Surge2: "surge&ver=2",
          },
@@ -28,8 +32,27 @@
 +        backendOptions: [{ value: "http://quzardhome.cn:25500/sub?" }],
          remoteConfig: [
            {
++            label: "默认",
++            options: [
++              {
++                label: "不选，由接口提供方提供",
++                value: ""
++              }
++            ]
++          },
++          {
 +            label: "ACL4SSR",
 +            options: [
++              {
++                label: "ACL4SSR_Online_Full_NoAuto.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
++                value:
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
++              },
++              {
++                label: "ACL4SSR_Online_Full_NoAuto.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
++                value:
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
++              },
 +              {
 +                label: "ACL4SSR_Online 默认版 分组比较全(与Github同步)",
 +                value:
