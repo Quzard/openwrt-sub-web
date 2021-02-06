@@ -24,7 +24,7 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
                    >
                      <el-button slot="append" @click="gotoGayhub" icon="el-icon-link">前往项目仓库</el-button>
                    </el-autocomplete>
-@@ -255,26 +255,166 @@ export default {
+@@ -255,26 +255,171 @@ export default {
            ClashR: "clashr",
            Surge2: "surge&ver=2",
          },
@@ -46,16 +46,21 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
 +            label: "ACL4SSR",
 +            options: [
 +              {
-+                label: "ACL4SSR_Online_Full_NoAuto.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
++                label: "ACL4SSR_Online_Full_Google_NoAuto.ini 全分组 无自动测速 谷歌规则 重度用户使用 (与Github同步)",
                  value:
 -                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/no-urltest.ini"
-+                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
++                  "https://raw.githubusercontent.com/Quzard/Clash_Config/master/ACL4SSR_Online_Full_Google_NoAuto.ini"
                },
                {
 -                label: "Urltest",
-+                label: "ACL4SSR_Online_Full_Netflix.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
++                label: "ACL4SSR_Online_Full_NoAuto.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
                  value:
 -                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/urltest.ini"
++                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
++              },
++              {
++                label: "ACL4SSR_Online_Full_Netflix.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
++                value:
 +                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_Netflix.ini"
 +              },
 +              {
@@ -197,7 +202,7 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
                {
                  label: "Maying",
                  value:
-@@ -336,6 +476,21 @@ export default {
+@@ -336,6 +481,21 @@ export default {
                    "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/special/basic.ini"
                }
              ]
@@ -219,8 +224,9 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
            }
          ]
        },
-@@ -663,3 +818,4 @@ export default {
+@@ -663,3 +823,5 @@ export default {
    },
  };
  </script>
++
 +
