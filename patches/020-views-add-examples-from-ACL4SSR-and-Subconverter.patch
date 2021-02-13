@@ -24,7 +24,7 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
                    >
                      <el-button slot="append" @click="gotoGayhub" icon="el-icon-link">前往项目仓库</el-button>
                    </el-autocomplete>
-@@ -255,26 +255,171 @@ export default {
+@@ -255,20 +255,304 @@ export default {
            ClashR: "clashr",
            Surge2: "surge&ver=2",
          },
@@ -119,6 +119,146 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
 +                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_AdblockPlus.ini"
 +              },
 +              {
++                label: "ACL4SSR 规则标准版",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/acl4ssr_standard.ini"
++              },
++              {
++                label: "ACL4SSR 规则 GFWList",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/acl4ssr_gfwlist.ini"
++              },
++              {
++                label: "ACL4SSR 规则 AdblockPlus",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_AdblockPlus.ini"
++              },
++              {
++                label: "ACL4SSR 规则 BackCN",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_BackCN.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Mini",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Mini.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Mini Fallback",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Mini_Fallback.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Mini MultiMode",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Mini_MultiMode.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Mini NoAuto",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Mini_NoAuto.ini"
++              },
++              {
++                label: "ACL4SSR 规则 NoApple",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_NoApple.ini"
++              },
++              {
++                label: "ACL4SSR 规则 NoAuto",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_NoAuto.ini"
++              },
++              {
++                label: "ACL4SSR 规则 NoAuto NoApple",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_NoAuto_NoApple.ini"
++              },
++              {
++                label: "ACL4SSR 规则 NoAuto NoApple NoMicrosoft",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_NoAuto_NoApple_NoMicrosoft.ini"
++              },
++              {
++                label: "ACL4SSR 规则 NoMicrosoft",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_NoMicrosoft.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online AdblockPlus",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online_AdblockPlus.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online Full",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online_Full.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online Full AdblockPlus",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online_Full_AdblockPlus.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online Full Netflix",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online_Full_Netflix.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online Full NoAuto",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online_Full_NoAuto.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online Mini",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online_Mini.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online Mini AdblockPlus",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online_Mini_AdblockPlus.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online Mini Fallback",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online_Mini_Fallback.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online Mini MultiMode",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online_Mini_MultiMode.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online Mini NoAuto",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online_Mini_NoAuto.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online NoAuto",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online_NoAuto.ini"
++              },
++              {
++                label: "ACL4SSR 规则 Online NoReject",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_Online_NoReject.ini"
++              },
++              {
++                label: "ACL4SSR 规则 WithChinaIp",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_WithChinaIp.ini"
++              },
++              {
++                label: "ACL4SSR 规则 WithChinaIp WithGFW",
++                value:
++                  "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/ACL4SSR_WithChinaIp_WithGFW.ini"
++              },
++              {
 +                label: "ACL4SSR 本地 默认版 分组比较全",
 +                value: "config/ACL4SSR.ini"
 +              },
@@ -195,14 +335,71 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
                }
              ]
            },
-           {
+@@ -276,6 +560,51 @@ export default {
              label: "customized",
              options: [
-+              
                {
++                label: "eHpo1 规则",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/ehpo1_main.ini"
++              },
++              {
++                label: "nzw9314 规则",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/nzw9314_custom.ini"
++              },
++              {
++                label: "maicoo-l 规则",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/maicoo-l_custom.ini"
++              },
++              {
++                label: "eHpo1 规则",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/ehpo1_main.ini"
++              },
++              {
++                label: "nzw9314 规则",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/nzw9314_custom.ini"
++              },
++              {
++                label: "maicoo-l 规则",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/maicoo-l_custom.ini"
++              },
++              {
++                label: "DlerCloud Platinum 李哥定制规则",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/dlercloud_lige_platinum.ini"
++              },
++              {
++                label: "DlerCloud Gold 李哥定制规则",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/dlercloud_lige_gold.ini"
++              },
++              {
++                label: "DlerCloud Silver 李哥定制规则",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/dlercloud_lige_silver.ini"
++              },              
++              {
                  label: "Maying",
                  value:
-@@ -336,6 +481,21 @@ export default {
+                   "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/customized/maying.ini"
+@@ -326,6 +655,11 @@ export default {
+             label: "Special",
+             options: [
+               {
++                label: "网易云解锁（仅规则分组）",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/netease.ini"
++              },
++              {
+                 label: "NeteaseUnblock(仅规则，No-Urltest)",
+                 value:
+                   "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/special/netease.ini"
+@@ -336,6 +670,26 @@ export default {
                    "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/special/basic.ini"
                }
              ]
@@ -210,6 +407,11 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
 +          {
 +            label: "universal",
 +            options: [
++              {
++                label: "默认（附带用于Clash的AdGuard DNS）",
++                value:
++                  "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/default_with_clash_adg.yml"
++              },
 +              {
 +                label: "No-Urltest",
 +                value:
@@ -224,9 +426,10 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
            }
          ]
        },
-@@ -663,3 +823,5 @@ export default {
+@@ -663,3 +1017,6 @@ export default {
    },
  };
  </script>
++
 +
 +
