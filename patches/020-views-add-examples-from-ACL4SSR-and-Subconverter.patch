@@ -20,7 +20,7 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
                      v-model="form.customBackend"
                      :fetch-suggestions="backendSearch"
 -                    placeholder="动动小手，（建议）自行搭建后端服务。例：http://127.0.0.1:25500/sub?"
-+                    placeholder="动动小手，（建议）自行搭建后端服务。例：http://quzardhome.cn:25500/sub?"
++                    placeholder="动动小手，（建议）自行搭建后端服务。例：https://api.wcc.best/sub?"
                    >
                      <el-button slot="append" @click="gotoGayhub" icon="el-icon-link">前往项目仓库</el-button>
                    </el-autocomplete>
@@ -29,7 +29,7 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
            Surge2: "surge&ver=2",
          },
 -        backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
-+        backendOptions: [{ value: "http://quzardhome.cn:25500/sub?" }],
++        backendOptions: [{ value: "https://api.wcc.best/sub?" }],
          remoteConfig: [
            {
 -            label: "universal",
@@ -426,10 +426,11 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
            }
          ]
        },
-@@ -663,3 +1017,6 @@ export default {
+@@ -663,3 +1017,7 @@ export default {
    },
  };
  </script>
++
 +
 +
 +
