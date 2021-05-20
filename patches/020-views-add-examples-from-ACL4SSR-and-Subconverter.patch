@@ -24,7 +24,7 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
                    >
                      <el-button slot="append" @click="gotoGayhub" icon="el-icon-link">前往项目仓库</el-button>
                    </el-autocomplete>
-@@ -255,20 +255,304 @@ export default {
+@@ -255,20 +255,309 @@ export default {
            ClashR: "clashr",
            Surge2: "surge&ver=2",
          },
@@ -46,16 +46,21 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
 +            label: "ACL4SSR",
 +            options: [
 +              {
-+                label: "ACL4SSR_Online_Full_Google_NoAuto.ini 全分组 无自动测速 谷歌规则 重度用户使用 (与Github同步)",
++                label: "无自动测速 谷歌规则 ",
                  value:
 -                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/no-urltest.ini"
 +                  "https://raw.githubusercontent.com/Quzard/Clash_Config/master/ACL4SSR_Online_Full_Google_NoAuto.ini"
                },
                {
 -                label: "Urltest",
-+                label: "ACL4SSR_Online_Full_NoAuto.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
++                label: "自动测速 故障转移 负载均衡 谷歌规则 ",
                  value:
 -                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/urltest.ini"
++                  "https://raw.githubusercontent.com/Quzard/Clash_Config/master/ACL4SSR_Online_Full_Google_urltest_fallback_load-balance.ini"
++              },
++              {
++                label: "ACL4SSR_Online_Full_NoAuto.ini 全分组 无自动测速 重度用户使用 (与Github同步)",
++                value:
 +                  "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
 +              },
 +              {
@@ -335,7 +340,7 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
                }
              ]
            },
-@@ -276,6 +560,51 @@ export default {
+@@ -276,6 +565,51 @@ export default {
              label: "customized",
              options: [
                {
@@ -387,7 +392,7 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
                  label: "Maying",
                  value:
                    "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/customized/maying.ini"
-@@ -326,6 +655,11 @@ export default {
+@@ -326,6 +660,11 @@ export default {
              label: "Special",
              options: [
                {
@@ -399,7 +404,7 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
                  label: "NeteaseUnblock(仅规则，No-Urltest)",
                  value:
                    "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/special/netease.ini"
-@@ -336,6 +670,26 @@ export default {
+@@ -336,6 +675,26 @@ export default {
                    "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/special/basic.ini"
                }
              ]
@@ -426,11 +431,3 @@ Index: sub-web-1.0.0/src/views/Subconverter.vue
            }
          ]
        },
-@@ -663,3 +1017,7 @@ export default {
-   },
- };
- </script>
-+
-+
-+
-+
